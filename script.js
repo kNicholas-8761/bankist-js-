@@ -302,12 +302,15 @@ btnLogin.addEventListener('click', function (e) {
     clearInterval(timer);
     timer = startLogOutTimer();
 
-    //Update UI
-    updateUI(currentAccount);
-
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
+
+    //Update UI
+    updateUI(currentAccount);
+
+    document.querySelector('.login-hint').innerHTML =
+      '💡 Demo logins: <strong>kb</strong>/1111, <strong>jd</strong>/2222, <strong>stw</strong>/3333, <strong>ss</strong>/4444 <br><em>(You can switch accounts anytime)</em>';
   }
 });
 

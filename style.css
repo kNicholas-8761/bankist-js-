@@ -25,22 +25,34 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .welcome {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .logo {
-  height: 5.25rem;
+  height: 5rem;
 }
 
 .login {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.login-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login__input {
@@ -49,7 +61,7 @@ nav {
   font-size: 1.6rem;
   font-family: inherit;
   text-align: center;
-  width: 12rem;
+  width: 15rem;
   border-radius: 10rem;
   margin-right: 1rem;
   color: inherit;
@@ -82,6 +94,12 @@ nav {
   outline: none;
   color: #777;
 }
+.login-hint {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
 
 /* MAIN */
 .app {
@@ -96,6 +114,7 @@ nav {
   /* NOTE This creates the fade in/out anumation */
   opacity: 0;
   transition: all 1s;
+  display: none;
 }
 
 .balance {
@@ -288,6 +307,11 @@ h2 {
 .timer {
   font-weight: 600;
 }
+.login-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .login-hint {
   font-size: 1.2rem;
@@ -295,4 +319,39 @@ h2 {
   margin-left: 2.5rem;
   color: #666;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 0;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    margin-right: 2rem;
+  }
+
+  .login {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0;
+  }
+  .login-block {
+    align-items: flex-start;
+  }
+
+  .login__input {
+    max-width: 12rem;
+  }
+
+  .login-hint {
+    margin-left: 1rem;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
 }
