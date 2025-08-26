@@ -163,7 +163,7 @@ nav {
   flex-shrink: 0;
   min-width: 9rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.2rem 1rem;
   border-radius: 10rem;
   color: #fff;
@@ -185,7 +185,7 @@ nav {
 }
 
 .movements__value {
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   margin-left: auto;
 }
 
@@ -402,6 +402,12 @@ h2 {
     height: 100%;
     overflow-y: auto;
   }
+  .movements__value {
+    font-size: 1.5rem;
+  }
+  .movements__type {
+    font-size: 1.2rem;
+  }
 
   .operations {
     grid-column: 2;
@@ -500,6 +506,12 @@ h2 {
   .movements {
     grid-column: 1;
     grid-row: 2;
+  }
+  .movements__value {
+    font-size: 1.7rem;
+  }
+  .movements__type {
+    font-size: 1.3rem;
   }
 
   .summary {
